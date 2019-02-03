@@ -1,20 +1,22 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: julien
- * Date: 22/05/18
- * Time: 17:36
- */
 
+/**
+ * Class TimeTravel.
+ */
 class TimeTravel
 {
+    /**
+     * @var DateTime $start
+     */
     private $start;
 
+    /**
+     * @var DateTime $end
+     */
     private $end;
 
     /**
      * TimeTravel constructor.
-     *
      * @param DateTime $start
      * @param DateTime $end
      */
@@ -62,7 +64,6 @@ class TimeTravel
 
     /**
      * Return interval between 2 DateTime objects.
-     *
      * @return string
      */
     public function getTravelInfo(): string
@@ -77,7 +78,6 @@ class TimeTravel
 
     /**
      * Add interval to the start date.
-     *
      * @param DateInterval $interval
      * @return string
      * @throws Exception
@@ -89,9 +89,11 @@ class TimeTravel
     }
 
     /**
+     * Get an array with all necessary dates.
      * @param DateInterval $step
+     * @return array
      */
-    public function backToFutureStepByStep(DateInterval $step)
+    public function backToFutureStepByStep(DateInterval $step): array
     {
         $result = [];
         $dates = new DatePeriod($this->start, $step, $this->end);

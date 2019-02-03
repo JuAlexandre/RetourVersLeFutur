@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: julien
- * Date: 22/05/18
- * Time: 17:36
- */
 
-require '../src/TimeTravel.php';
+require 'src/TimeTravel.php';
 
 $startDate = new DateTime('1985-12-31');
 $endDate = new DateTime('2018-05-23');
